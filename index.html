@@ -6,12 +6,32 @@
 
   <title>Etch-a-Sketch</title>
   <meta name="description" content="Odin Project Etch-a-Sketch">
-
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
+  <header>Etch-a-Sketch</header>
+
+  <div class="createGrid">
+    <h2> Create your grid</h2>
+    <form>
+      <label for="width">Width:</label>
+      <input id="width" name="width" type="number" step="1">
+    </form>
+    <form>
+      <label for="height">Height:</label>
+      <input id="height" name="height" type="number" step="1">
+    </form>
+    <button id="createButton">Create!</button>
+
+  </div>
+
+
+  <div class="grid">
+
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
