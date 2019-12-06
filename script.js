@@ -3,13 +3,6 @@ let gridHeight = 16
 const grid = document.querySelector(".grid")
 
 
-// document.getElementById("createButton").addEventListener("click", function(){
-//   gridWidth = document.getElementById("width").value;
-//   gridHeight = document.getElementById("height").value;
-//   createGrid();
-//   fillGrid();
-// })
-
 const createGrid = function(){
     grid.style.gridTemplateColumns = `repeat(${gridWidth}, 1fr)`;
     grid.style.gridTemplateRows = `repeat(${gridHeight}, 1fr)`;
@@ -31,4 +24,16 @@ const createSquares = function(){
 createGrid();
 createSquares();
 
-//WORKING ON TRYING TO GET THE GRID SQURES TO FILL COLOR SELECTED - LOOK AT ADDING THE LISTENER TO THE PARENT CONTAINER AND THEN IF IT ALSO MATCHES THE GRID ITEM COLOR IT?
+const reset = function(){
+  gridWidth = prompt("Select a number for the height and width of your next canvas", 16);
+  gridHeight = gridWidth;
+  createGrid();
+  createSquares();
+  const squares = document.querySelectorAll('.gridItem');
+  squares.forEach(element =>{
+    element.style.backgroundColor = "white";
+  })
+
+}
+
+document.getElementById("resetButton").addEventListener('click', reset);
