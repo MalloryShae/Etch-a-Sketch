@@ -27,13 +27,9 @@ createSquares();
 const reset = function(){
   gridWidth = prompt("Select a number for the height and width of your next canvas", 16);
   gridHeight = gridWidth;
+  grid.innerHTML = "";
   createGrid();
   createSquares();
-  const squares = document.querySelectorAll('.gridItem');
-  squares.forEach(element =>{
-    element.style.backgroundColor = "white";
-  })
-
 }
 
 document.getElementById("resetButton").addEventListener('click', reset);
